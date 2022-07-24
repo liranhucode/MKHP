@@ -10,4 +10,20 @@ void Partitioner::run()
 
 
     }
+
+
+    CalculateCost();
+}
+
+
+void Partitioner::CalculateCost()
+{
+    cost_ = 0;
+    for (const auto &edge : hgraph_.GetHedges())
+    {
+        if (edge.is_cutted)
+        {
+            cost_ += edge.weight;
+        }
+    }
 }

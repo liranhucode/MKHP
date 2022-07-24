@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	timer.Report("");
 
 	timer.Restart("Hypergraph partitoner");
-	Partitioner partioner(&hgraph); 
+	Partitioner partioner(hgraph); 
 	partioner.run();
 	partioner.report();
 	timer.Report("");

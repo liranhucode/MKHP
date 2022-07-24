@@ -8,9 +8,9 @@ class Hypernode
 public:
     Hypernode (int i, double w) : id(i), weight(w) {} 
     int id;
+    int part_id = 0;
     double weight;
     std::vector<index> edges;
-
 };
 
 class Hyperedge
@@ -20,6 +20,7 @@ public:
     int id;
     double weight;
     std::vector<index> nodes;
+    bool is_cutted = false;
 
 };
 
@@ -36,6 +37,11 @@ public:
         std::cout << " Num nodes: " << num_nodes_ << std::endl;
         std::cout << " Num edges: " << num_edges_ << std::endl;
     }
+
+    std::vector<Hyperedge> GetHedges() { return hedges_; }
+    std::vector<Hypernode> GetHnodes() { return hnodes_; }
+    int GetNumEdges() const { return num_edges_; }
+    int GetNumNodes() const { return num_nodes_; }
 
 private:
     int num_nodes_;
