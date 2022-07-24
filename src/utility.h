@@ -1,7 +1,6 @@
 #pragma once
-#include <iostream>
 #include <vector>
-
+#include "timer.h"
 
 class Option
 {
@@ -12,12 +11,4 @@ public:
     int max_coarsen_to;
     float reduct_ratio;
     std::string outfile;
-};
-
-
-class Timer
-{
-
-
-
 };

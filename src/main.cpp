@@ -1,4 +1,3 @@
-
 #include "partitioner.h"
 
 int main(int argc, char *argv[])
@@ -9,13 +8,17 @@ int main(int argc, char *argv[])
 	std::string file = argv[1];
 	std::cout << file << std::endl;
 
+	Timer timer("Parsing input hypergraph file");
 	Hypergraph hgraph;
 	hgraph.Parser(file);
 	hgraph.Report();
+	timer.Report("");
 
+	timer.Restart("Hypergraph partitoner");
 	Partitioner partioner(&hgraph); 
 	partioner.run();
 	partioner.report();
+	timer.Report("");
 
 	return 0;
 }

@@ -1,5 +1,4 @@
 #pragma once
-
 #include "utility.h"
 
 using index = int32_t;

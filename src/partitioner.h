@@ -10,7 +10,7 @@ public:
     Partitioner(Hypergraph *hgraph) : hgraph_(hgraph) {}
     ~Partitioner() {}
 
-    void run() {}
+    void run(); 
     void report() {}
 
 private:

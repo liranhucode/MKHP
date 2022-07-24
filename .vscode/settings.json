@@ -35,6 +35,20 @@
         "deque": "cpp",
         "unordered_set": "cpp",
         "iomanip": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "atomic": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "complex": "cpp",
+        "condition_variable": "cpp",
+        "csignal": "cpp",
+        "cstring": "cpp",
+        "list": "cpp",
+        "mutex": "cpp",
+        "ratio": "cpp",
+        "system_error": "cpp",
+        "thread": "cpp",
+        "cinttypes": "cpp",
+        "typeindex": "cpp"
     }
 }
