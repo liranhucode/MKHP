@@ -33,14 +33,14 @@ public:
 
 	void compute_hyperedge_degree();
 
-	//¼ÆËã¶¥µã¶È
+	//ï¿½ï¿½ï¿½ã¶¥ï¿½ï¿½ï¿½
 	void compute_vertex_degree();
 
 
-	//¼ÆËãÁÙ½ü³¬±ß
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ï¿½ï¿½
 	void compute_incidence_hyperedge();
 
-	//¼ÆËã³öÃ¿¸ö¶¥µãµÄÁÙ½ü¶¥µã
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ï¿½ï¿½
 	void compute_adjcent_vertices();
 
 	void print_hypergraph_info(string file, int nparts, int ubfactor);
@@ -53,19 +53,19 @@ public:
 
 	float RatioOfHedgeAndVertex();
 
-	/*ÅÐ¶Ï³¬±ßÊÇ·ñÊÇµ¥¸ö¶¥µãµÄ³¬±ß*/
+	/*ï¿½Ð¶Ï³ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½*/
 	bool is_single_hyperedge(int & num);
 
-	/*ÅÐ¶Ï³¬±ßÊÇ·ñÊÇ¶ÀÁ¢µÄ³¬±ß*/
+	/*ï¿½Ð¶Ï³ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ç¶ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½*/
 	bool is_dependent_hyperedge(int &num);
 
 public:
 
 						
-	int	nvtxs, nhedges;		/*nvtxs = ³¬Í¼µÄ¶¥µãÊý, nhedges = ³¬Í¼µÄ³¬±ßÊý*/
+	int	nvtxs, nhedges;		/*nvtxs = ï¿½ï¿½Í¼ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½, nhedges = ï¿½ï¿½Í¼ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½*/
 
 
-	size_s tvwgts;			/*¶¥µãµÄÈ¨ÖµÖ®ºÍ*/
+	size_s tvwgts;			/*ï¿½ï¿½ï¿½ï¿½ï¿½È¨ÖµÖ®ï¿½ï¿½*/
 
 
 	vector<int> eptr;
@@ -92,7 +92,7 @@ public:
 	// An array that represent the maps from orginal hypergraph to coarser hypergraph 
 
 	
-	vector<int> label;			/*±íÊ¾µ±Ç°×ÓÍ¼µÄ¶¥µãÔÚÔ­Í¼ÉÏµÄÐòºÅ*/
+	vector<int> label;			/*ï¿½ï¿½Ê¾ï¿½ï¿½Ç°ï¿½ï¿½Í¼ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½Ô­Í¼ï¿½Ïµï¿½ï¿½ï¿½ï¿½*/
 	
 	//Initial partition
 	vector<int> cutsign;
@@ -105,19 +105,19 @@ public:
 	//An array that stores the incident edges of vertices 
 	//vector<vector<int>> incidence_hyperedge;
 
-	//´æ·ÅµÄ¸Ã¶¥µãµÄÁÙ½ü³¬±ß
-	vector<vector<int>> incidence_hyperedge;
+	//ï¿½ï¿½ÅµÄ¸Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ï¿½ï¿½
+	vector<vector<int> > incidence_hyperedge;
 
 
 	
-	//fmÓÅ»¯½×¶ÎÓÃµ½µÄ
+	//fmï¿½Å»ï¿½ï¿½×¶ï¿½ï¿½Ãµï¿½ï¿½ï¿½
 	int nbnd;
-	unordered_set<int> bndlist;
+	std::unordered_set<int> bndlist;
 	vector<int> bndptr;
 
 	vector<float> fs;
-	vector<float> te;      /*fs[i]¡ª¡ª¡ª¡ª°üº¬¶¥µãiµÄ³¬±ßµÄÆäËû¶¥µãÈ«²¿Óëi²»ÔÚÒ»¸ö·ÖÇø£¬fs[i] + 1*/
-						   /*te[i]¡ª¡ª¡ª¡ª°üº¬¶¥µãiµÄ³¬±ß£¬µ±ÓÐ³¬±ßÖÐËùÓÐ¶¥µãÓëiÍ¬ÔÚÒ»¸ö·ÖÇø£¬te[i] + 1*/
+	vector<float> te;      /*fs[i]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½Ä³ï¿½ï¿½ßµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½fs[i] + 1*/
+						   /*te[i]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½Ä³ï¿½ï¿½ß£ï¿½ï¿½ï¿½ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½iÍ¬ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½te[i] + 1*/
 
 
 
@@ -131,7 +131,7 @@ public:
 	// This is an integer that returns the number of hyperedges that are being cut by the partitioning algorithm
 
 
-	vector<int> pwgts;				/*·ÖÇø¶¥µãÈ¨ÖµÖ®ºÍ*/
+	vector<int> pwgts;				/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ÖµÖ®ï¿½ï¿½*/
 
 
 									//The coarser hypergraph and finer hypergraph

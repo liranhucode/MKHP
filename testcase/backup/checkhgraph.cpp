@@ -3,7 +3,7 @@
 #include "checkhgraph.h"
 #include "hgraph.h"
 
-/*¼ì²é³¬Í¼ÊÇ·ñ·ûºÏ¹æÔò*/
+/*ï¿½ï¿½é³¬Í¼ï¿½Ç·ï¿½ï¿½ï¿½Ï¹ï¿½ï¿½ï¿½*/
 void check_hgraph(s_hgraph* hgraph) {
 
 	check_vertex(hgraph);
@@ -13,7 +13,7 @@ void check_hgraph(s_hgraph* hgraph) {
 
 
 
-/*¼ì²é³¬±ßÊı×éÖĞÊÇ·ñ°üº¬ÁË {1 - nvtxs}ÖĞËùÓĞµÄ¶¥µã*/
+/*ï¿½ï¿½é³¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ {1 - nvtxs}ï¿½ï¿½ï¿½ï¿½ï¿½ĞµÄ¶ï¿½ï¿½ï¿½*/
 void check_vertex(s_hgraph *hgraph)
 {
 
@@ -37,7 +37,7 @@ void check_vertex(s_hgraph *hgraph)
 }
 
 
-/*¼ì²é³¬±ßÊı×éÖĞÊÇ·ñ°üº¬ÁË {1 - nvtxs}ÖĞËùÓĞµÄ¶¥µã*/
+/*ï¿½ï¿½é³¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ {1 - nvtxs}ï¿½ï¿½ï¿½ï¿½ï¿½ĞµÄ¶ï¿½ï¿½ï¿½*/
 void check_hyperedge(s_hgraph *hgraph)
 {
 
@@ -68,7 +68,7 @@ void check_dependent_hyperedge(s_hgraph * hgraph)
 
 }
 
-/*¼ì²é¶¥µãµÄfs teÓëÊµ¼ÊÖµÊÇ·ñÒ»ÖÂ*/
+/*ï¿½ï¿½é¶¥ï¿½ï¿½ï¿½fs teï¿½ï¿½Êµï¿½ï¿½Öµï¿½Ç·ï¿½Ò»ï¿½ï¿½*/
 int check_fs_and_te(s_hgraph * hgraph, int higain)
 {
 	int n, i, k, j;
@@ -98,7 +98,7 @@ int check_fs_and_te(s_hgraph * hgraph, int higain)
 		}
 		else if (count[hgraph->where[higain - 1]] == 1) {
 
-			/*k¶¥µãËùÔÚ·ÖÇøµÄ¶¥µã¸öÊıÎª1*/
+			/*kï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª1*/
 			fs += hgraph->hewgts[n];
 
 		}
@@ -110,9 +110,9 @@ int check_fs_and_te(s_hgraph * hgraph, int higain)
 }
 
 /********************************************************
-/*ÊäÈë²ÎÊı£º ³¬Í¼Êı¾İ½á¹¹ 
-/*·µ»ØÖµ£º	³¬±ßµÄcutÊı
-/*¹¦ÄÜ£º		¸ù¾İhgraphµÄwhereÊı×é,¼ÆËã³öµ±Ç°³¬Í¼µÄcutÊı
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Í¼ï¿½ï¿½ï¿½İ½á¹¹ 
+/*ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½	ï¿½ï¿½ï¿½ßµï¿½cutï¿½ï¿½
+/*ï¿½ï¿½ï¿½Ü£ï¿½		ï¿½ï¿½ï¿½ï¿½hgraphï¿½ï¿½whereï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Í¼ï¿½ï¿½cutï¿½ï¿½
 *********************************************************/
 int compute_mincut(s_hgraph * hgraph)
 {
@@ -237,7 +237,7 @@ void check_fs_and_te(s_hgraph * hgraph)
 		}
 		else 
 		{
-			//Ã»±»ÇĞ¸îµÄ³¬±ß£¬ËùÓĞ¶¥µãµÄte += ³¬±ßÈ¨Öµ
+			//Ã»ï¿½ï¿½ï¿½Ğ¸ï¿½Ä³ï¿½ï¿½ß£ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½te += ï¿½ï¿½ï¿½ï¿½È¨Öµ
 			for (i = hgraph->eptr[n]; i < hgraph->eptr[n + 1]; ++i) {
 
 				k = hgraph->eind[i];
