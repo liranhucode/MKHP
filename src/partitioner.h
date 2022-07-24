@@ -5,7 +5,7 @@ class Partitioner
 {
 
 public:
-    Partitioner(Hypergraph *hgraph) {}
+    Partitioner(Hypergraph *hgraph) : hgraph_(hgraph) {}
     ~Partitioner() {}
 
     void run() {}

@@ -7,15 +7,19 @@ using index = int32_t;
 class Hypernode
 {
 public:
+    Hypernode (int i, double w) : id(i), weight(w) {} 
     int id;
-    int weight;
+    double weight;
+    std::vector<index> edges;
+
 };
 
 class Hyperedge
 {
 public:
+    Hyperedge (int i, double w) : id(id), weight(w) {} 
     int id;
-    int weight;
+    double weight;
     std::vector<index> nodes;
 
 };
@@ -25,6 +29,14 @@ class Hypergraph
 public:
     Hypergraph(/* args */) {};
     ~Hypergraph() {};
+
+
+    void Parser(std::string &file_name);
+    void Report()
+    {
+        std::cout << " Num nodes: " << num_nodes_ << std::endl;
+        std::cout << " Num edges: " << num_edges_ << std::endl;
+    }
 
 private:
     int num_nodes_;

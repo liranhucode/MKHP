@@ -30,6 +30,11 @@
         "utility": "cpp",
         "typeinfo": "cpp",
         "cstddef": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "ctime": "cpp",
+        "deque": "cpp",
+        "unordered_set": "cpp",
+        "iomanip": "cpp",
+        "numeric": "cpp"
     }
 }
