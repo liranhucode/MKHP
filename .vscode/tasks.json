@@ -3,11 +3,12 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++ build active file",
-            "command": "/usr/bin/g++",
+            //"command": "/usr/bin/g++",
+            "command": "/opt/rh/devtoolset-8/root/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "-std=c++11",
+                "-std=c++17",
                 //"${file}",
                 "${fileDirname}/*.cpp",
                 "-o",

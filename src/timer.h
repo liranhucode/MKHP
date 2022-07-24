@@ -1,8 +1,5 @@
 #pragma once
 #include <iostream>
-#include <time.h>
-
-#include <iostream>
 #include <string>
 #include <chrono>
  
@@ -29,19 +26,19 @@ public:
         restart();
     }
 
-    void Report(const std::string &tip, bool is_ms = true)
+    void Report(const std::string &message, bool is_ms = true)
     {
         if (is_ms)
         {
-            if (tip.length() > 0)
-                std::cout << tip + ":" << elapsed() << "ms" << std::endl;
+            if (message.length() > 0)
+                std::cout << message + ":" << elapsed() << "ms" << std::endl;
             else
                 std::cout << _name << elapsed() << "ms" << std::endl;
         }
         else
         {
-            if (tip.length() > 0)
-                std::cout << tip + ":" << elapsed() / 1000.0 << "s" << std::endl;
+            if (message.length() > 0)
+                std::cout << message + ":" << elapsed() / 1000.0 << "s" << std::endl;
             else
                 std::cout << _name << elapsed() / 1000.0 << "s" << std::endl;
         }
@@ -64,4 +61,4 @@ private:
     std::chrono::steady_clock::time_point start_time_;
     std::chrono::steady_clock::time_point end_time_;
     std::string _name;
-}; // 
+};  

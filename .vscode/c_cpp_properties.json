@@ -8,9 +8,10 @@
             "defines": [
                 "DEBUG"
             ],
-            "compilerPath": "/usr/bin/gcc",
+            //"compilerPath": "/usr/bin/gcc",
+            "compilerPath": "/opt/rh/devtoolset-8/root/usr/bin/gcc",
             "cStandard": "c89",
-            "cppStandard": "c++11",
+            "cppStandard": "c++17",
             "intelliSenseMode": "linux-gcc-x64"
         }
     ],

@@ -16,7 +16,7 @@ public:
 class Hyperedge
 {
 public:
-    Hyperedge (int i, double w) : id(id), weight(w) {} 
+    Hyperedge (int i, double w) : id(i), weight(w) {} 
     int id;
     double weight;
     std::vector<index> nodes;
@@ -27,7 +27,7 @@ public:
 class Hypergraph
 {
 public:
-    Hypergraph(/* args */) {};
+    Hypergraph() {};
     ~Hypergraph() {};
 
 

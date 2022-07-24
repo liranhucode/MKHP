@@ -7,7 +7,8 @@ class Partitioner
 {
 
 public:
-    Partitioner(Hypergraph &hgraph) : hgraph_(hgraph) {}
+    Partitioner() {}
+    Partitioner(std::shared_ptr<Hypergraph> hgraph) : hgraph_(hgraph) {}
     ~Partitioner() {}
 
     void run();
@@ -20,7 +21,7 @@ public:
     void CalculateCost();
 
 private:
-    Hypergraph hgraph_;
+    std::shared_ptr<Hypergraph> hgraph_;
     Option option_;
     Coarse coarse_;
     Refine refine_;

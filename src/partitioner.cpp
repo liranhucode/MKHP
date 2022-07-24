@@ -10,8 +10,6 @@ void Partitioner::run()
 
 
     }
-
-
     CalculateCost();
 }
 
@@ -19,7 +17,7 @@ void Partitioner::run()
 void Partitioner::CalculateCost()
 {
     cost_ = 0;
-    for (const auto &edge : hgraph_.GetHedges())
+    for (const auto &edge : hgraph_->GetHedges())
     {
         if (edge.is_cutted)
         {
