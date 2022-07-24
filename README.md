@@ -1,1 +1,1 @@
-# Simple_hypergraph_partitioning
+# Simple hypergraph partitioner
